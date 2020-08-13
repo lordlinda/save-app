@@ -5,6 +5,7 @@ const dotenv=require('dotenv')
 const cors=require('cors')
 const bodyParser=require('body-parser')
 const mongoose=require('mongoose')
+const path=require('path')
 
 
 //we have certain variables  that we need to use however we need to protect them
@@ -32,9 +33,11 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended:false}))
 //so there are some middlewares  that we want only to run during development
 //that when we deploy we no longer want them to run
-if(process.env.NODE_ENV){
+if(process.env.NODE_ENV==='development'){
 	app.use(morgan('dev'))
 }
+
+
 //we use our routes
 app.use('/users',require('./routes/auth.js'))
 
@@ -45,6 +48,13 @@ app.use((req,res,next)=>{
 	})
 })
 
+if(process.env.NODE_ENV === 'production'){
+	  app.use(express.static('client/build'))
+	  app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname + '/client/build/index.html'));
+  });
+
+}
 //in development,we can use our hardcoded port however in deployment we process.env.PORT
 //so that we can be assigned to an available port
 const PORT = process.env.PORT || 5000

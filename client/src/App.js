@@ -10,7 +10,7 @@ function App() {
     <Provider store={store}>
     <Router>
     <Switch>
-    <Route exact path='/home' component={Homepage}/>
+    <Route exact path='/' component={Homepage}/>
     <Route exact path='/questions' component={Question}/>
     <Route exact path='/plans' component={Stepfive}/>
     </Switch>

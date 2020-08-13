@@ -4,16 +4,7 @@ body{
 	padding:0
 }
 
-.container{
-	/*this ensures that there is equal spacing on both sides of the container*/
-/* 20% meansdistance from the top*/
-	margin: 20% auto;
-	width:80%;
-    border:1px solid #e5e5e5;
-    /*this is the distance between the text and the borders*/
-    padding:30px 20px;
 
-}
 .title{
 	/*this is to give it a bit of hierachy*/
 	font-size: 23px;
@@ -59,10 +50,7 @@ body{
 	/*text color*/
 	color:#fff;
 }
-.separator{
-	/*distance between the text and the block above it*/
-	margin-top: 10px
-}
+
 
 .page-box{
 	height:100vh;
@@ -70,11 +58,7 @@ body{
 	color:#fff;
 	display:flex;
 }
-.message{
- font-family: 'Playfair Display', serif;
-  margin:auto;
-  padding:5px;
-}
+
 
 /*homepage css*/
 .plans{
@@ -147,20 +131,6 @@ font-family: 'Playfair Display', serif;
 }
 
 @media screen and (min-width: 768px) {
-
-  .container{
-	/*this ensures that there is equal spacing on both sides of the container*/
-/* 20% meansdistance from the top*/
-	margin: 20% auto;
-	/*and in this case the width occupied reduces bacuse we dont want itto cover the whole screen but in the center*/
-	width:60%;
-    border:1px solid #e5e5e5;
-    /*this is the distance between the text and the borders*/
-    /*for the tablet since the width is bigger the distance betwwen the sided has to be bigger on 
-    both*/
-    padding:30px 120px;
-
-},
 .plans{
 	height:100vh;
 

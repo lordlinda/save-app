@@ -39,7 +39,7 @@ export const makePayment=(token,details)=>{
 //console.log(token,details)
 return async dispatch=>{
     await axios
-              .post(`${process.env.REACT_APP_SERVER}/users/payments`,{token,details})
+              .post('/users/payments',{token,details})
               .then(res=>{
                //console.log(res)
                dispatch({
@@ -57,7 +57,7 @@ const email =localStorage.getItem('email')
 export const getPlans=()=>{
   return async dispatch=>{
         await  axios
-                    .get(`${process.env.REACT_APP_SERVER}/users/plans/${email}`)
+                    .get(`/users/plans/${email}`)
                     .then(plans=>{
                       //console.log(plans.data.plans[0].charges)
                       dispatch({
