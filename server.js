@@ -56,6 +56,7 @@ if(process.env.NODE_ENV === 'production'){
   });
 
 }
+//console.log(path.join(__dirname, "client", "build"))
 //in development,we can use our hardcoded port however in deployment we process.env.PORT
 //so that we can be assigned to an available port
 const PORT = process.env.PORT || 5000
