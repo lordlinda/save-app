@@ -1,0 +1,174 @@
+/*this is to get rid of any styles*/
+body{
+	margin:0;
+	padding:0
+}
+
+.container{
+	/*this ensures that there is equal spacing on both sides of the container*/
+/* 20% meansdistance from the top*/
+	margin: 20% auto;
+	width:80%;
+    border:1px solid #e5e5e5;
+    /*this is the distance between the text and the borders*/
+    padding:30px 20px;
+
+}
+.title{
+	/*this is to give it a bit of hierachy*/
+	font-size: 23px;
+	/*this is to ensure that it doesnt get on the same line with other text*/
+	display:block;
+	font-family: 'Playfair Display', serif;
+	/*distance from the title to the next block below it*/
+	margin-bottom: 20px;
+		color:#9E0D9E;
+
+
+}
+/*this is what shows the asterix to show that input is required*/
+.required{
+	color:red;
+}
+/*this is for the error on the signup page*/
+.error{
+	color:red;
+	padding-bottom:40px;
+}
+.input{
+	/*this is the around the input*/
+	border:1px solid #e5e5e5;
+	/*this is just to give it some round borders*/
+	border-radius: 5px;
+	/*this is the distance from the next element*/
+	margin-bottom:10px;
+	/*this is the distance from the text and border 
+	note increasing right or left padding may cause the input to move out of the conatiner*/
+	padding:5px;
+	display:block;
+}
+
+.button{
+	/*we remove the default border*/
+	border:none;
+	/*the distance of the text from the borders giving it height and width*/
+	padding:8px 23px;
+	border-radius:5px;
+	/*this is the background color*/
+	background:#9E0D9E;
+	/*text color*/
+	color:#fff;
+}
+.separator{
+	/*distance between the text and the block above it*/
+	margin-top: 10px
+}
+
+.page-box{
+	height:100vh;
+	background: #604960;
+	color:#fff;
+	display:flex;
+}
+.message{
+ font-family: 'Playfair Display', serif;
+  margin:auto;
+  padding:5px;
+}
+
+/*homepage css*/
+.plans{
+	color: #604960;
+	/*this ensures that the height fills the whole screen height*/
+	height:100vh;
+	font-family: 'Playfair Display', serif;
+
+}
+.heading{
+text-align:center
+}
+.card{
+	margin-top: 30px;
+	color:#fff;
+	background: #604960;
+}
+
+.button-2{
+	display:block;
+	border:none;
+	font-size:14px;
+	background:#604960;
+	color:#fff;
+	border-radius:5px;
+	margin-top:15px;
+	padding:10px 10px;
+}
+/*this is the box handling the question */
+.box{
+	height:100vh;
+	width:100%;
+	color:#604960;
+	font-family: 'Playfair Display', serif;
+}
+.question{
+	margin:0 auto;
+	width:80%;
+	padding:20% 0px;
+}
+.button-next{
+	display:block;
+	border:none;
+	font-size:14px;
+	background:#604960;
+	color:#fff;
+	border-radius:5px;
+	margin-left:80px;
+	padding:10px 20px;
+   position:relative;
+   top:36px;
+
+}
+.button-prev{
+	border:none;
+	font-size:14px;
+	background:#604960;
+	color:#fff;
+	border-radius:5px;
+	padding:10px 20px;
+}
+/*summary page*/
+.summary{
+color:#604960;	
+height:100vh;
+padding:50px 20px;
+text-align:center;
+font-family: 'Playfair Display', serif;
+
+}
+
+@media screen and (min-width: 768px) {
+
+  .container{
+	/*this ensures that there is equal spacing on both sides of the container*/
+/* 20% meansdistance from the top*/
+	margin: 20% auto;
+	/*and in this case the width occupied reduces bacuse we dont want itto cover the whole screen but in the center*/
+	width:60%;
+    border:1px solid #e5e5e5;
+    /*this is the distance between the text and the borders*/
+    /*for the tablet since the width is bigger the distance betwwen the sided has to be bigger on 
+    both*/
+    padding:30px 120px;
+
+},
+.plans{
+	height:100vh;
+
+},
+.heading:{
+	margin-top: 20px;
+	font-size:2000px;
+}
+
+
+}
