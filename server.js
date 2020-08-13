@@ -42,11 +42,11 @@ if(process.env.NODE_ENV==='development'){
 app.use('/users',require('./routes/auth.js'))
 
 //this is error middleware handler for a route which doesnt exist
-app.use((req,res,next)=>{
+/*app.use((req,res,next)=>{
 	res.status(404).json({
 		message:'Page not found'
 	})
-})
+})*/
 
 if(process.env.NODE_ENV === 'production'){
 	  app.use(express.static(path.join(__dirname, "client", "build")))
